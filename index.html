@@ -21,16 +21,61 @@
            <div id="part2" class="">
                <div id="form-wrapper">
                 <div id="top"><span class="white">Try it free 7days</span>then $20/mo. thereafter</div>
-                <div class="another">
-                    <div class="frm"><input type="text" id="fname" name="fname" placeholder="First Name" required></div>
-                    <div class="frm"><input type="text" id="lname" name="lname" placeholder="Last Name" required></div>
-                    <div class="frm"><input type="email" id="email" name="fname" placeholder="Email Address" required></div>
-                    <div class="frm"><input type="password" id="password" name="password" placeholder="password" required></div>
+
+                <form class="another">
+                    <div class="frm">
+                        <input 
+                            type="text" 
+                            id="fname" 
+                            name="fname" 
+                            placeholder="First Name" 
+                            required 
+                            oninvalid="this.setCustomValidity('First Name cannot be empty')" 
+                            oninput="this.setCustomValidity('')"
+                        >
+                    </div>
+
+                    <div class="frm">
+                        <input 
+                            type="text" 
+                            id="lname" 
+                            name="lname" 
+                            placeholder="Last Name" 
+                            required 
+                            oninvalid="this.setCustomValidity('Last Name cannot be empty')"
+                            oninput="this.setCustomValidity('')"
+                        >
+                    </div>
+
+                    <div class="frm">
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Email Address" 
+                            required 
+                            oninvalid="this.setCustomValidity('Looks like this is not an email')"
+                            oninput="this.setCustomValidity('')"
+                        >
+                    </div>
+                    <div class="frm">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="password" 
+                            required 
+                            oninvalid="this.setCustomValidity('Password cannot be empty')"
+                            oninput="this.setCustomValidity('')"
+                        >
+                    </div>
  
-                    <div><input type="submit" id="submit" value="CLAIM YOUR FREE TRIAL"></div>
-                    <div id="last">By clicking the button, you are agreeing to our <span class="red">Terms and Services</span></p></div>
+                    <div><input type="submit" id="submit" value="CLAIM YOUR FREE TRIAL" action="'#"></div>
+                    <div id="last">
+                        By clicking the button, you are agreeing to our <span class="red">Terms and Services</span>
+                    </div>
                  </div>
-               </div>
+               </form>
            </div>
        </div>
    </main> 
